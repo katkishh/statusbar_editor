@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'statusbar_editor_method_channel.dart';
@@ -25,5 +26,17 @@ abstract class StatusbarEditorPlatform extends PlatformInterface {
 
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<void> changeStatusBarColor(Color color) async {
+    throw UnimplementedError(
+      'changeStatusBarColor() has not been implemented.',
+    );
+  }
+
+  Future<void> changeStatusBarTheme(bool isLight, {Color? statusBarColor}) async {
+    throw UnimplementedError(
+      'changeStatusBarTheme() has not been implemented.',
+    );
   }
 }

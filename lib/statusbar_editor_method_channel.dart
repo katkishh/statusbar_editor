@@ -11,7 +11,35 @@ class MethodChannelStatusbarEditor extends StatusbarEditorPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version = await methodChannel.invokeMethod<String>(
+      'getPlatformVersion',
+    );
     return version;
+  }
+
+  /// This method uses plain ARGB components to acquire maximum precision
+  @override
+  Future<void> changeStatusBarColor(Color color) async {
+    await methodChannel.invokeMethod('changeStatusBarColor', {
+      'a': color.a,
+      'r': color.r,
+      'g': color.g,
+      'b': color.b,
+    });
+  }
+
+  /// This method uses plain ARGB components to acquire maximum precision
+  @override
+  Future<void> changeStatusBarTheme(
+    bool isLight, {
+    Color? statusBarColor,
+  }) async {
+    await methodChannel.invokeMethod('changeStatusBarTheme', {
+      'is_light': isLight,
+      'a': statusBarColor?.a,
+      'r': statusBarColor?.r,
+      'g': statusBarColor?.g,
+      'b': statusBarColor?.b,
+    });
   }
 }
