@@ -5,13 +5,13 @@
 Pod::Spec.new do |s|
   s.name             = 'statusbar_editor'
   s.version          = '0.0.1'
-  s.summary          = 'A plugin to edit dtatusbar settings on mobile devices'
+  s.summary          = 'A plugin to edit statusbar settings on mobile devices'
   s.description      = <<-DESC
 A plugin to edit dtatusbar settings on mobile devices
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Ekaterina' => 'ek.kshinina@yandex.ru' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'

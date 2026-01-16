@@ -17,7 +17,8 @@ class MethodChannelStatusbarEditor extends StatusbarEditorPlatform {
     return version;
   }
 
-  /// This method uses plain ARGB components to acquire maximum precision
+  /// This method uses plain ARGB components to acquire maximum precision and
+  /// allow iOS implementation
   @override
   Future<void> changeStatusBarColor(Color color) async {
     await methodChannel.invokeMethod('changeStatusBarColor', {
@@ -28,7 +29,8 @@ class MethodChannelStatusbarEditor extends StatusbarEditorPlatform {
     });
   }
 
-  /// This method uses plain ARGB components to acquire maximum precision
+  /// This method uses plain ARGB components to acquire maximum precision and
+  /// allow iOS implementation
   @override
   Future<void> changeStatusBarTheme(
     bool isLight, {
