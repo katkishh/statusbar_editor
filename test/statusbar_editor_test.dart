@@ -30,10 +30,9 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    StatusbarEditor statusbarEditorPlugin = StatusbarEditor();
     MockStatusbarEditorPlatform fakePlatform = MockStatusbarEditorPlatform();
     StatusbarEditorPlatform.instance = fakePlatform;
 
-    expect(await statusbarEditorPlugin.getPlatformVersion(), '42');
+    expect(await StatusbarEditor.getPlatformVersion(), '42');
   });
 }

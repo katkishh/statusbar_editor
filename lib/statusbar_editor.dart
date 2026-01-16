@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'statusbar_editor_platform_interface.dart';
 
 class StatusbarEditor {
-  Future<String?> getPlatformVersion() {
+  static Future<String?> getPlatformVersion() {
     return StatusbarEditorPlatform.instance.getPlatformVersion();
   }
 
-  Future<void> changeStatusBarColor(Color color) async {
+  static Future<void> changeStatusBarColor(Color color) async {
     return await StatusbarEditorPlatform.instance.changeStatusBarColor(color);
   }
 
-  Future<void> changeStatusBarTheme(
+  static Future<void> changeStatusBarTheme(
     bool isLight, {
     Color? statusBarColor,
   }) async {
